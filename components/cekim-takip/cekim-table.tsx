@@ -6,8 +6,8 @@ import { CheckCircle, Circle } from "lucide-react"
 const mockData = [
   {
     id: "1",
-    egitimAdi: "Kültürel Mirasımız: Adana",
-    videoAdi: "Adana Kebap",
+    egitimAdi: "Kultürel Mirasımız: Adana",
+    videoAda: "Adana Kebap",
     cekimTarihi: "01.10.2025",
     onCekim: true,
     izlence: true,
@@ -48,9 +48,9 @@ export function CekimTable() {
               <div key={item.id} className="border rounded-lg p-4">
                 <div className="flex items-start justify-between mb-4">
                   <div>
-                    <h3 className="font-semibold">{item.egitimAdi}</h3>
+                    <h3 className="font-semibold">{item.egitimAdd}</h3>
                     <p className="text-sm text-muted-foreground">{item.videoAdi}</p>
-                    <p className="text-xs text-muted-foreground mt-1">Çekim: {item.cekimTarihi}</p>
+                    <p className="text-xs text-muted-foreground mt-1">çekim: {item.cekimTarihi}</p>
                   </div>
                   <div className="text-right">
                     <div className="text-2xl font-bold">{progress}%</div>
@@ -61,7 +61,7 @@ export function CekimTable() {
                 <div className="h-2 bg-gray-200 rounded-full mb-4">
                   <div
                     className="h-full bg-primary rounded-full transition-all"
-                    style={{ width: \`\${progress}%\` }}
+                    style={{ width: progress + "%" }}
                   />
                 </div>
 
@@ -69,7 +69,7 @@ export function CekimTable() {
                   {[
                     { label: "Ön Çekim", checked: item.onCekim },
                     { label: "İzlence", checked: item.izlence },
-                    { label: "Işık", checked: item.isik },
+                    { label: "ışık", checked: item.isik },
                     { label: "Fotoğraf", checked: item.fotografCekimleri },
                     { label: "Kontroller", checked: item.kontroller },
                     { label: "Tasnif", checked: item.tasnif },
