@@ -9,7 +9,7 @@ const mockData = [
   {
     id: "1",
     dal: "Güzel Sanatlar",
-    alan: "Sanat ve Tasarım",
+    alan: "Sanat ve Tasarím",
     bolum: "Fotoğraf",
     egitim: "Drone Fotoğrafçılığı 1",
     egitmen: "Bülent Eren",
@@ -22,7 +22,7 @@ const mockData = [
     dal: "El Sanatları",
     alan: "Kuyumculuk",
     bolum: "Takı Tasarımı",
-    egitim: "Peyote Tekniği",
+    egitim: "Peyote Tenniği",
     egitmen: "Nihal Men",
     durum: "ID Bekliyor",
     icerikBaslamaTarihi: "07.04.2025",
@@ -56,7 +56,7 @@ export function EgitimTable() {
                 <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Dal</th>
                 <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Alan</th>
                 <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Eğitim</th>
-                <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Eğitmen</th>
+                <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">EƟitmen</th>
                 <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Durum</th>
                 <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Tarih</th>
               </tr>
@@ -69,7 +69,7 @@ export function EgitimTable() {
                   <td className="px-4 py-3 text-sm font-medium">{item.egitim}</td>
                   <td className="px-4 py-3 text-sm">{item.egitmen}</td>
                   <td className="px-4 py-3">
-                    <span className={\`px-2 py-1 text-xs font-medium rounded-full \${statusColors[item.durum as keyof typeof statusColors]}\`}>
+                    <span className={"px-2 py-1 text-xs font-medium rounded-full " + (statusColors[item.durum as keyof typeof statusColors] || "")}>
                       {item.durum}
                     </span>
                   </td>
